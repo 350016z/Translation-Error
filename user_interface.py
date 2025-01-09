@@ -207,4 +207,6 @@ with gr.Blocks(theme=gr.themes.Default()) as demo:
     source.value = original
     target.value = translated
 
-demo.launch(share=True)
+# 使用 $PORT 變數來綁定端口
+port = int(os.environ.get("PORT", 8080))  # 預設使用 8080 端口
+demo.launch(server_name="0.0.0.0", server_port=port)
