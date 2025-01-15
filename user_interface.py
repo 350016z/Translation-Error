@@ -2,7 +2,7 @@ import gradio as gr
 import pandas as pd
 import os
 
-data_path = "evaliation_dataset/input/test.csv"
+data_path = "evaluation_dataset/input/test.csv"
 annotations_path = "output/test_annotations.csv"  
 score_path = "output/test_score.csv" 
 
