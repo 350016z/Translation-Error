@@ -75,8 +75,8 @@ def update_file_selection(selected_file):
     current_index = 0
 
     file_base_name = os.path.splitext(selected_file)[0]
-    annotations_path = f"output/{file_base_name}_annotations.csv"
-    score_path = f"output/{file_base_name}_score.csv"
+    annotations_path = f"evaluation_dataset/output/{file_base_name}_annotations.csv"
+    score_path = f"evaluation_dataset/output/{file_base_name}_score.csv"
 
     return get_current_text() + ("", "", f"已加載檔案：{selected_file}")
 
@@ -220,7 +220,7 @@ with gr.Blocks(theme=gr.themes.Default()) as demo:
 
         def handle_download(selected_file):
             if selected_file:
-                file_path = f"output/{selected_file}"
+                file_path = f"evaluation_dataset/output/{selected_file}"
                 return file_path, f"檔案 {selected_file} 已準備下載。"
             return None, "請選擇有效的檔案進行下載。"
 
