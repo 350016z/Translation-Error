@@ -13,7 +13,7 @@ data = pd.read_csv(data_path)
 current_index = 0
 
 # output
-output_dir = os.path.join(current_dir, "output")
+output_dir = os.path.join(os.path.dirname(os.path.abspath(current_dir)), "output")
 if not os.path.exists(output_dir): 
     os.makedirs(output_dir)
 
