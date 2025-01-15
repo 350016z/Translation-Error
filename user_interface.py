@@ -3,8 +3,8 @@ import pandas as pd
 import os
 
 data_path = "evaluation_dataset/input/test.csv"
-annotations_path = "output/test_annotations.csv"  
-score_path = "output/test_score.csv" 
+annotations_path = "evaluation_dataset/output/test_annotations.csv"  
+score_path = "evaluation_dataset/output/test_score.csv" 
 
 current_dir = os.path.dirname(os.path.abspath(data_path))
 csv_files = [f for f in os.listdir(current_dir) if f.endswith('.csv')]
